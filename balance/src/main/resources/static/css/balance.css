@@ -1,0 +1,187 @@
+/* Fondo con el mismo degradado del index */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #2a5665, #85a3ba, #af7d55);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor central */
+.container {
+  text-align: center;
+  max-width: 800px;
+}
+
+/* Título centrado */
+.titulo {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Caja con explicación */
+.card {
+  background-color: #fefaf6;
+  color: #1d3d4a;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0 #ddd;
+  margin-bottom: 3rem;
+}
+
+/* Contenedor de botones */
+.botones {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem; /* 👉 separación entre botones */
+}
+
+/* Botón base con ancho igual */
+.btn {
+  text-decoration: none;
+  color: #fff;
+  font-weight: normal;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  width: 100px; /* tamaño uniforme */
+  text-align: center;
+  box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Mejora de legibilidad para los párrafos explicativos */
+.card p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  text-align: justify;
+  font-size: 1rem;
+}
+
+/* Negritas destacadas en texto */
+.card strong {
+  color: #1d3d4a;
+  font-weight: bold;
+}
+
+/* Cursiva explicativa */
+.card em {
+  font-style: italic;
+  color: #1d3d4a;
+}
+
+/*  Estilo para botón "Activo" */
+.btn-verde-oscuro {
+  background-color: #2a5665;
+}
+
+.btn-verde-oscuro:hover {
+  background-color: #283a40;
+}
+
+/*  Estilo para botón "Pasivo" */
+.btn-verde {
+  background-color: #2a5665;
+}
+
+.btn-verde:hover {
+  background-color: #2d6a5f;
+}
+
+/*  Estilo para botón "Ir al inicio" */
+.btn-azul {
+  background-color: #5a94c0;
+}
+
+.btn-azul:hover {
+  background-color: #4484b6;
+}
+
+/*  Estilo para botón "Ir al Podcast" */
+.btn-naranja {
+  background-color: #e6a33d;
+}
+
+.btn-naranja:hover {
+  background-color: #d38d1f;
+}
+
+/* =============================
+    ADAPTACIÓN RESPONSIVE BALANCE
+   ============================= */
+
+@media (max-width: 600px) {
+
+  /* Contenedor principal sin centrado vertical */
+  body {
+    display: block;
+    padding: 1rem;
+    height: auto;
+    align-items: flex-start;
+  }
+
+  /* Espaciado superior del contenido */
+  .container {
+    margin-top: 1rem;
+  }
+
+  /* Título principal adaptado al móvil */
+  .titulo {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Caja informativa con scroll si el contenido es largo */
+  .card {
+    max-width: 320px;
+    max-height: 60vh;              /* limita verticalmente la tarjeta */
+    overflow-y: auto;              /* activa scroll solo si hace falta */
+    margin: 0 auto 1.5rem auto;
+    padding: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    scroll-behavior: smooth;
+    scrollbar-width: thin;         /* Scroll fino para Firefox */
+  }
+
+  .card p {
+    text-align: left;
+  }
+
+  /* Estilo personalizado para el scroll en Chrome/Safari */
+  .card::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .card::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+
+  /* Botones centrados, separados y más compactos */
+  .botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* Botón adaptado al ancho de pantalla */
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+

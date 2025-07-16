@@ -100,7 +100,7 @@ Balance-Your-Life-WebApp/
 
 **Laura Arvez**
 📧 [contacto@lauraarvez.dev](mailto:arvezlau@hotmail.com)
-🌐 [https://lauraarvez.dev]([https://lauraarvez.dev](https://lauraarvez.github.io/))
+🌐 [[https://lauraarvez.dev](https://lauraarvez.github.io/)]([https://lauraarvez.dev](https://lauraarvez.github.io/))
 
 ---
 

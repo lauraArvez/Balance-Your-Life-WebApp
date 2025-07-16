@@ -1,0 +1,242 @@
+/* ================================================
+   ESTILOS GENERALES DEL POPUP DE DETALLE
+   ================================================ */
+
+/* Fondo con degradado y centrado total del contenido */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2a5665, #85a3ba, #af7d55);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Contenedor central del contenido del popup */
+.popup-contenido {
+    background-color: #2a5665;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 4px 4px 20px rgba(250, 250, 250, 0.2);
+    color: #fff;
+    position: relative;
+    border-right: 4px solid #fff;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Fecha debajo del título */
+#fecha {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+}
+
+/* Subtítulos de Activo y Pasivo */
+h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* Lista de ítems */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Ítems con tamaño reducido */
+li {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem; /* Reducido en 1 punto */
+    padding: 4px 0;
+}
+
+/* Contenedor de ambas columnas (activo y pasivo) */
+.columna-doble {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Estilo de cada bloque (activo o pasivo) */
+.bloque {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* ================================================
+   BOTÓN DE CIERRE SUPERIOR DERECHO
+   ================================================ */
+
+/* Botón circular tipo "✕" */
+.cerrar-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #e6a33d;
+    border: none;
+    cursor: pointer;
+    color: #2a5665;
+    font-weight: bold;
+    text-align: center;
+    line-height: 32px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.cerrar-popup:hover {
+    background-color: #d38d1f;
+    color: #fff;
+}
+
+/* ================================================
+    BOTÓN DE DESCARGAR PDF (ESTILO UNIFICADO)
+   ================================================ */
+
+/* Estilo base de todos los botones */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1rem;
+    padding: 1rem 0;
+    width: 180px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    background-color: #2a5665;
+    box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    font-family: "Segoe UI", sans-serif;
+    margin: 2rem auto 0;
+    display: block; /* Centrado automático */
+}
+
+/* Variante naranja */
+.btn-naranja {
+    background-color: #e6a33d;
+}
+
+.btn-naranja:hover {
+    background-color: #d38d1f;
+}
+
+/* ================================================
+    RESPONSIVE DESIGN PARA MÓVILES
+   ================================================ */
+@media (max-width: 600px) {
+
+    body {
+        display: block;
+        padding: 1rem;
+        height: auto;
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+
+    .popup-contenido {
+        width: 100%;
+        max-width: 340px;
+        padding: 1.2rem;
+        box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.15);
+        margin: 0 auto;
+        border-radius: 10px;
+        border-right: 4px solid #fff;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    #fecha {
+        font-size: 0.85rem;
+        margin-bottom: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+
+    li {
+        font-size: 0.85rem;
+        padding: 2px 0;
+    }
+
+    .columna-doble {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .bloque {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        font-size: 0.92rem;
+        padding: 0.85rem 1rem;
+        margin-top: 2rem;
+    }
+
+    .cerrar-popup {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+        line-height: 28px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .popup-contenido {
+        width: 95%;
+        max-width: 340px;
+        padding: 1.2rem;
+        box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.15);
+        margin: 1rem auto;
+        border-radius: 10px;
+        border-right: 4px solid #fff;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 260px;
+        font-size: 0.9rem;
+        padding: 0.85rem 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .columna-doble {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .bloque {
+        width: 100%;
+    }
+}
+    

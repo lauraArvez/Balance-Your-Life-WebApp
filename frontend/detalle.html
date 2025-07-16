@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis puntuaciones</title>
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="css/detalle.css">
+</head>
+<body>
+  <div class="popup-contenido">
+    <button class="cerrar-popup" onclick="window.close()">✕</button>
+  <!--<div class="container">-->
+    <h1>Mis puntuaciones</h1>
+    <p id="fecha"></p>
+
+    <div class="columna-doble">
+      <div class="bloque">
+        <h2>Activo</h2>
+        <ul id="listaActivo"></ul>
+      </div>
+
+      <div class="bloque">
+        <h2>Pasivo</h2>
+        <ul id="listaPasivo"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="js/detalle.js"></script>
+</body>
+</html>

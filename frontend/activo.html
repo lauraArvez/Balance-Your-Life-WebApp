@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evalúa tu activo</title>
+  <link rel="icon" href="img/activo_pasivo.png" type="image/png" />
+  <link rel="stylesheet" href="css/activo.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- Título de la página -->
+    <h1 class="titulo">Evalúa tu activo</h1>
+
+    <!-- Sección informativa con explicación sobre el Activo -->
+    <div class="card">
+      <p><strong>¿Qué es el Activo?</strong></p>
+      <p>Representa "lo que tenemos". Para la mayoría de las personas, se fundamenta en cinco parámetros, cada uno a puntuar del 0 al 10.</p>
+      <p>El 10 sería la máxima percepción de que estoy colmado absolutamente de ese valor. Un 9 es lo máximo que se puede obtener pero también lo máximo que se puede desear, porque todavía nos queda un pequeño margen para mejorar.</p>
+      <p>La autocomplacencia excesiva sería evidentemente nefasta para nuestra evolución.</p>
+      <p>La valoración del activo puede fluctuar con el tiempo debido a las circunstancias vitales.</p>
+      <p><strong>Antoni Bolinches</strong> sugiere que una puntuación total entre 35 y 45 puntos es deseable para la mayoría de las personas, con un máximo ideal de 50.</p>
+    </div>
+
+      <!-- Formulario de puntuación del Activo -->
+      <div class="bloque">
+      <div id="mensajeError" class="error-box oculto"></div>
+      <div class="activo-items">
+        <!-- Campo: Amor -->
+        <div class="fila">
+          <div class="etiqueta">
+            <label for="amor">AMOR</label>
+            <p class="descripcion">(Satisfacción relacionada con el amor sexualizado y las relaciones de pareja)</p>
+          </div>
+          <input id="amor" name="amor" type="number" min="0" max="10" step="1" required>
+        </div>
+
+        <!-- Campo: Familia -->
+        <div class="fila">
+          <div class="etiqueta">
+            <label for="familia">FAMILIA</label>
+            <p class="descripcion">(Percepción de la realidad familiar)</p>
+          </div>
+          <input id="familia" name="familia" type="number" min="0" max="10" step="1" required>
+        </div>
+
+        <!-- Campo: Realización Personal -->
+        <div class="fila">
+          <div class="etiqueta">
+            <label for="realizacion">REALIZACIÓN PERSONAL</label>
+            <p class="descripcion">(Satisfacción con los logros y el camino personal)</p>
+          </div>
+          <input id="realizacion" name="realizacion" type="number" min="0" max="10" step="1" required>
+        </div>
+
+        <!-- Campo: Coherencia Interna -->
+        <div class="fila">
+          <div class="etiqueta">
+            <label for="coherencia">COHERENCIA INTERNA</label>
+            <p class="descripcion">(Alineación entre lo que se piensa, se siente y se hace)</p>
+          </div>
+          <input id="coherencia" name="coherencia" type="number" min="0" max="10" step="1" required>
+        </div>
+
+        <!-- Campo: Confort Material -->
+        <div class="fila">
+          <div class="etiqueta">
+            <label for="confort">CONFORT MATERIAL</label>
+            <p class="descripcion">(Satisfacción con la situación económica y material)</p>
+          </div>
+          <input id="confort" name="confort" type="number" min="0" max="10" step="1" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botones de navegación -->
+    <div class="botones">
+      <a href="pasivo.html" class="btn btn-verde">Evaluar tu pasivo</a>
+      <a href="index.html" class="btn btn-azul">Ir al inicio</a>
+    </div>
+  </div>
+  
+  <!-- Script de validación y guardado -->
+  <script src="js/puntuaciones.js"></script>
+</body>
+</html>

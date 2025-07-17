@@ -69,10 +69,10 @@ main {
   margin-right: auto;
 }
 
-#interpretacionResultado {
+/*#interpretacionResultado {
   max-height: 100px;
-  /*overflow-y: auto;*/
-}
+  overflow-y: auto;
+}*/
 
 
 /* ===============================================

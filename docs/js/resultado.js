@@ -64,7 +64,7 @@ function mostrarResultadosEnPantalla(data) {
 }
 
 
-// 🚀 Enviar y mostrar resultado completo
+// Enviar y mostrar resultado completo
 async function enviarBalanceYMostrarResultado() {
   const dto = construirBalanceRequestDTO();
   const errores = validarDatosLocales(dto);

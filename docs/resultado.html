@@ -8,86 +8,88 @@
   <link rel="icon" href="img/favicon.png" type="image/png" />
 </head>
 <body>
-  <div class="container">
-    <!-- Título principal, visible solo en pantalla (se oculta al exportar a PDF) -->
-    <h1 class="titulo ocultar-en-pdf">Tu balance existencial</h1>
+  <main>
+    <div class="container">
+      <!-- Título principal, visible solo en pantalla (se oculta al exportar a PDF) -->
+      <h1 class="titulo ocultar-en-pdf">Tu balance existencial</h1>
 
-    <!-- Caja explicativa con interpretación teórica del balance -->
-    <div class="card">
-      <h3>Análisis del Balance y Detección de Narcisismo</h3>
-      <p>
-        La idea es comparar las puntuaciones totales del <strong>Activo</strong> y el <strong>Pasivo</strong>. Idealmente, debería haber coherencia o un pequeño desajuste manejable. Un desajuste significativo puede requerir una revisión honesta de las puntuaciones.
-      </p>
-      
-      <p>
-        Este ejercicio plantea una reflexión sobre el <strong>egoísmo</strong>, diferenciando entre el <em>egoísmo negativo</em> (todo para mí) y el <em>egoísmo positivo</em> (poner límites al propio egoísmo para respetar a los demás y sentir satisfacción al ayudar sin perjudicarse).
-        El egoísmo positivo está relacionado con la capacidad de reconocer la ayuda recibida.
-      </p>
+      <!-- Caja explicativa con interpretación teórica del balance -->
+      <div class="card">
+        <h3>Análisis del Balance y Detección de Narcisismo</h3>
+        <p>
+          La idea es comparar las puntuaciones totales del <strong>Activo</strong> y el <strong>Pasivo</strong>. Idealmente, debería haber coherencia o un pequeño desajuste manejable. Un desajuste significativo puede requerir una revisión honesta de las puntuaciones.
+        </p>
+        
+        <p>
+          Este ejercicio plantea una reflexión sobre el <strong>egoísmo</strong>, diferenciando entre el <em>egoísmo negativo</em> (todo para mí) y el <em>egoísmo positivo</em> (poner límites al propio egoísmo para respetar a los demás y sentir satisfacción al ayudar sin perjudicarse).
+          El egoísmo positivo está relacionado con la capacidad de reconocer la ayuda recibida.
+        </p>
 
-      <p>
-        Ayuda a evitar <em>"hacer trampas al solitario"</em> y responder <em>"lo que quisieran ser, no lo que son"</em>, o <em>"cómo quisieran estar, no cómo están"</em>.
-        Promueve una <strong>aceptación superadora</strong> de la realidad personal.
-      </p>
-    </div>
+        <p>
+          Ayuda a evitar <em>"hacer trampas al solitario"</em> y responder <em>"lo que quisieran ser, no lo que son"</em>, o <em>"cómo quisieran estar, no cómo están"</em>.
+          Promueve una <strong>aceptación superadora</strong> de la realidad personal.
+        </p>
+      </div>
 
-    <!-- Resultados calculados dinámicamente: activo, pasivo, diferencia e interpretación -->
-    <div class="bloque">
-      <div id="mensajeErrorResultado" class="mensaje-error oculto"></div>
-      <div class="activo-items">
+      <!-- Resultados calculados dinámicamente: activo, pasivo, diferencia e interpretación -->
+      <div class="bloque">
+        <div id="mensajeErrorResultado" class="mensaje-error oculto"></div>
+        <div class="activo-items">
 
-        <!-- Total del Activo -->
-        <div class="fila">
-          <div class="etiqueta">
-            <label for="amor">ACTIVO</label>
-            <p class="descripcion">(es lo que tenemos)</p>
+          <!-- Total del Activo -->
+          <div class="fila">
+            <div class="etiqueta">
+              <label for="amor">ACTIVO</label>
+              <p class="descripcion">(es lo que tenemos)</p>
+            </div>
+            <input id="valorActivo" type="text" readonly />
           </div>
-          <input id="valorActivo" type="text" readonly />
-        </div>
 
-        <!-- Total del Pasivo -->
-        <div class="fila">
-          <div class="etiqueta">
-            <label for="amor">PASIVO</label>
-            <p class="descripcion">(a quien se lo de debemos)</p>
+          <!-- Total del Pasivo -->
+          <div class="fila">
+            <div class="etiqueta">
+              <label for="amor">PASIVO</label>
+              <p class="descripcion">(a quien se lo de debemos)</p>
+            </div>
+            <input id="valorPasivo" type="text" readonly />
           </div>
-          <input id="valorPasivo" type="text" readonly />
-        </div>
 
-        <!-- Diferencia entre Activo y Pasivo -->
-        <div class="fila">
-          <div class="etiqueta">
-            <label for="amor">RESULTADO</label>
-            <p class="descripcion">(activo - pasivo)</p>
+          <!-- Diferencia entre Activo y Pasivo -->
+          <div class="fila">
+            <div class="etiqueta">
+              <label for="amor">RESULTADO</label>
+              <p class="descripcion">(activo - pasivo)</p>
+            </div>
+            <input id="valorDiferencia" type="text" readonly />
           </div>
-          <input id="valorDiferencia" type="text" readonly />
-        </div>
 
-        <!-- Interpretación generada desde el backend -->
-        <div id="interpretacionResultado" class="interpretacion-dentro">
-          <p>Cargando interpretación...</p>
+          <!-- Interpretación generada desde el backend -->
+          <div id="interpretacionResultado" class="interpretacion-dentro">
+            <p>Cargando interpretación...</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Zona inferior con botones -->
-    <div class="botones ocultar-en-pdf">
-      <button id="btnMostrarDetalle" class="btn btn-verde">Mis puntuaciones</button>
-      <a href="https://youtu.be/QYlp88-Oe5g?si=DBJyZpNLEfKtNx2F" class="btn btn-naranja" target="_blank">Ir al Podcast</a>
-      <a href="index.html" class="btn btn-azul">Ir al Inicio</a>
-    </div>
+      <!-- Zona inferior con botones -->
+      <div class="botones ocultar-en-pdf">
+        <button id="btnMostrarDetalle" class="btn btn-verde">Mis puntuaciones</button>
+        <a href="https://youtu.be/QYlp88-Oe5g?si=DBJyZpNLEfKtNx2F" class="btn btn-naranja" target="_blank">Ir al Podcast</a>
+        <a href="index.html" class="btn btn-azul">Ir al Inicio</a>
+      </div>
 
-    <!-- Enlace de YouTube que se oculta al generar PDF -->
-    <div class="enlace-youtube ocultar-en-pdf">
-      🎧 Escucha el podcast también en
-      <a href="https://www.youtube.com/@OjalaLoHubieraSabidoAntes" target="_blank">
-        YouTube: Ojalá lo hubiera sabido antes
-      </a>
+      <!-- Enlace de YouTube que se oculta al generar PDF -->
+      <div class="enlace-youtube ocultar-en-pdf">
+        🎧 Escucha el podcast también en
+        <a href="https://www.youtube.com/@OjalaLoHubieraSabidoAntes" target="_blank">
+          YouTube: Ojalá lo hubiera sabido antes
+        </a>
+      </div>
     </div>
-  </div>
+  </main>
 
   <!-- Scripts funcionales -->
   <script src="js/resultado.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-</body>/>
+</body>
 </html>

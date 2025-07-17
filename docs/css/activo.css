@@ -64,7 +64,7 @@ main {
   border-radius: 6px;
   color: #fff;
   text-align: left;
-  /*max-width: 80%;     /* 📏 Más estrecho */
+  /*max-width: 80%;     /* Más estrecho */
   margin-left: auto;  /* Centrado horizontal */
   margin-right: auto;
 }
@@ -86,19 +86,22 @@ main {
   border-radius: 10px;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 3rem;
-  max-width: 600px; /* Igual que el .card 800*/
+  max-width: 800px; /* Igual que el .card 800*/
   margin-left: auto;
   margin-right: auto;
   overflow-y: auto; /**/
+  max-height: 340px; /* Limita la altura para que no empuje los botones */
 }
 
 /* Caja interna que agrupa las preguntas */
 .activo-items {
   background-color: #2a5665;
-  padding: 2rem;
+  padding: 1.5rem; /*2*/
   border-radius: 10px;
   box-shadow: 4px 4px 0 #b5c9d6;
   min-width: 300px;
+  max-height: 100%;/**/
+  overflow-y: auto;
 }
 
 /* Cada fila con etiqueta y campo numérico */
@@ -106,8 +109,8 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: flex-start; /* Alinea parte superior */
-  margin-bottom: 1.5rem;
-  gap: 1rem;
+  margin-bottom: 1rem; /*1.5*/
+  gap: 0.8rem; /*1*/
 }
 
 /* Estilo para el contenedor de la etiqueta */

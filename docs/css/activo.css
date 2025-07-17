@@ -43,7 +43,7 @@ main {
     TARJETA EXPLICATIVA DEL ACTIVO
    =============================================== */
 
-/* Caja clara con texto negro para destacar explicaciones */
+/* Caja clara con texto verde oscura para destacar explicaciones */
 .card {
   background-color: #fefaf6;
   color: #1d3d4a;
@@ -71,7 +71,7 @@ main {
 
 #interpretacionResultado {
   max-height: 100px;
-  overflow-y: auto;
+  /*overflow-y: auto;*/
 }
 
 
@@ -82,14 +82,14 @@ main {
 /* Caja envolvente de los ítems del activo */
 .bloque {
   background-color: #2a5665;
-  padding: 0.5rem;
+  padding: 1.5rem; /*0.5*/
   border-radius: 10px;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem; /**/
   max-width: 800px; /* Igual que el .card 800*/
   margin-left: auto;
   margin-right: auto;
-  overflow-y: auto; /**/
+  /*overflow-y: auto; */
   max-height: 340px; /* Limita la altura para que no empuje los botones */
 }
 
@@ -99,9 +99,9 @@ main {
   padding: 1.5rem; /*2*/
   border-radius: 10px;
   box-shadow: 4px 4px 0 #b5c9d6;
-  min-width: 300px;
-  max-height: 100%;/**/
-  overflow-y: auto;
+  /*min-width: 300px;
+  max-height: 100%;*/
+  /*overflow-y: auto;*/
 }
 
 /* Cada fila con etiqueta y campo numérico */

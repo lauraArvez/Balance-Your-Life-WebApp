@@ -9,7 +9,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
-# Puerto en el que Spring Boot expone el servicio (asegúrate de que coincida con tu app)
+# Puerto en el que Spring Boot expone el servicio
 EXPOSE 8080
 
 # Comando de arranque

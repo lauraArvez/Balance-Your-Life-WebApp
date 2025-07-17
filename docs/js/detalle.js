@@ -29,7 +29,8 @@
 
     // Obtener interpretación desde backend
     try {
-        const res = await fetch("http://localhost:8080/api/v1/balance/interpretar", {
+        //const res = await fetch("http://localhost:8080/api/v1/balance/interpretar", {
+        const res = await fetch("https://lauraarvez.github.io/Balance-Your-Life-WebApp/api/v1/balance/interpretar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dto)

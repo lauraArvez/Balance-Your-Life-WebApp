@@ -75,8 +75,8 @@ async function enviarBalanceYMostrarResultado() {
   }
 
   try {
-    const res = await fetch("http://localhost:8080/api/v1/balance/interpretar", {
-    //const res = await fetch("https://balance-your-life-webapp.onrender.com/api/v1/balance/interpretar", {
+    //const res = await fetch("http://localhost:8080/api/v1/balance/interpretar", {
+    const res = await fetch("https://balance-your-life-webapp.onrender.com/api/v1/balance/interpretar", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(dto)

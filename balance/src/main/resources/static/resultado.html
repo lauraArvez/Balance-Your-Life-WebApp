@@ -6,6 +6,8 @@
   <title>Resultado del Balance</title>
   <link rel="stylesheet" href="css/activo.css" />
   <link rel="icon" href="img/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="css/comun.css" />
+  <link rel="stylesheet" href="css/resultado.css" />
 </head>
 <body>
   <div class="container">
@@ -33,40 +35,27 @@
     <!-- Resultados calculados dinámicamente: activo, pasivo, diferencia e interpretación -->
     <div class="bloque">
       <div id="mensajeErrorResultado" class="mensaje-error oculto"></div>
-      <div class="activo-items">
-
-        <!-- Total del Activo -->
-        <div class="fila">
-          <div class="etiqueta">
-            <label for="amor">ACTIVO</label>
-            <p class="descripcion">(es lo que tenemos)</p>
-          </div>
-          <input id="valorActivo" type="text" readonly />
+      <div class="resumen-valores">
+        <div class="linea">
+          <span class="label">ACTIVO</span>
+          <span class="detalle">(amor. familia, realización personal, coherencia interna, confort material)</span>
+          <span class="valor" id="textoActivo">5</span>
         </div>
-
-        <!-- Total del Pasivo -->
-        <div class="fila">
-          <div class="etiqueta">
-            <label for="amor">PASIVO</label>
-            <p class="descripcion">(a quien se lo de debemos)</p>
-          </div>
-          <input id="valorPasivo" type="text" readonly />
+        <div class="linea">
+          <span class="label">PASIVO</span>
+          <span class="detalle">(capacidad, madurez, esfuerzo, suerte, ayuda)</span>
+          <span class="valor" id="textoPasivo">5</span>
         </div>
-
-        <!-- Diferencia entre Activo y Pasivo -->
-        <div class="fila">
-          <div class="etiqueta">
-            <label for="amor">RESULTADO</label>
-            <p class="descripcion">(activo - pasivo)</p>
-          </div>
-          <input id="valorDiferencia" type="text" readonly />
+        <div class="linea">
+          <span class="label">RESULTADO</span>
+          <span class="detalle">(activo - pasivo)</span>
+          <span class="valor" id="textoDiferencia">0</span>
         </div>
-
+      </div>
         <!-- Interpretación generada desde el backend -->
         <div id="interpretacionResultado" class="interpretacion-dentro">
           <p>Cargando interpretación...</p>
         </div>
-      </div>
     </div>
 
     <!-- Zona inferior con botones -->
@@ -89,5 +78,5 @@
   <script src="js/resultado.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-</body>/>
+</body>
 </html>

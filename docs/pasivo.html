@@ -5,83 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Evalúa tu pasivo</title>
   <link rel="icon" href="img/activo_pasivo.png" type="image/png" />
-  <link rel="stylesheet" href="css/activo.css" />
+  <link rel="stylesheet" href="css/comun.css" />
+  <link rel="stylesheet" href="css/activoPasivo.css" />
 </head>
 
 <body>
-  
-    <div class="container">
-      <!-- Título de la página -->
-      <h1 class="titulo">Evalúa tu pasivo</h1>
+  <div class="container">
+    <!-- Título de la página -->
+    <h1 class="titulo">Evalúa tu pasivo</h1>
 
-      <!-- Sección informativa con explicación sobre el Pasivo -->
-      <div class="card">
-        <p><strong>¿Qué es el Pasivo?</strong></p>
-        <p>El pasivo es a "quién se lo debemos" en relación con los "activos vitales" que poseemos. Es decir, de dónde provienen los puntos que uno se ha asignado en el activo.</p>
-        <p>Antoni nos aclara que la capacidad, madurez y esfuerzo son "posibilidades personales" o lo que se denomina <strong>"buena suerte trabajada".</strong></p>
-        <p>Los otros dos parámetros, la suerte (referida al azar) y la ayuda, son cruciales porque es "donde podremos detectar a los narcisistas"</p>
-      </div>
+    <!-- Sección informativa con explicación sobre el Pasivo -->
+    <div class="card">
+      <p><strong>¿Qué es el Pasivo?</strong></p>
+      <p>El pasivo es a "quién se lo debemos" en relación con los "activos vitales" que poseemos. Es decir, de dónde provienen los puntos que uno se ha asignado en el activo.</p>
+      <p>Antoni nos aclara que la capacidad, madurez y esfuerzo son "posibilidades personales" o lo que se denomina <strong>"buena suerte trabajada".</strong></p>
+      <p>Los otros dos parámetros, la suerte (referida al azar) y la ayuda, son cruciales porque es "donde podremos detectar a los narcisistas"</p>
+    </div>
 
-      <!-- Formulario de puntuación del Pasivo -->
-      <div class="bloque">
-        <div id="mensajeError" class="error-box oculto"></div>
-        <div class="activo-items">
-          <!-- Campo: Capacidad -->
-          <div class="fila">
-            <div class="etiqueta">
-              <label for="capacidad">CAPACIDAD</label>
-              <p class="descripcion">(Potencial y talento para afrontar la vida y resolver dificultades)</p>
-            </div>
-            <input id="capacidad" name="capacidad" type="number" min="0" max="10" step="1" required>
+    <!-- Formulario de puntuación del Pasivo -->
+    <div class="bloque">
+      <div id="mensajeError" class="error-box oculto"></div>
+      <div class="activo-items">
+        <!-- Campo: Capacidad -->
+        <div class="fila">
+          <div class="etiqueta">
+            <label for="capacidad">CAPACIDAD</label>
+            <p class="descripcion">(Potencial y talento para afrontar la vida y resolver dificultades)</p>
           </div>
+          <input id="capacidad" name="capacidad" type="number" min="0" max="10" step="1" required>
+        </div>
 
-          <!-- Campo: Madurez-->
-          <div class="fila">
-            <div class="etiqueta">
-              <label for="madurez">MADUREZ</label>
-              <p class="descripcion">(Grado de equilibrio emocional y responsabilidad)</p>
-            </div>
-            <input id="madurez" name="madurez" type="number" min="0" max="10" step="1" required>
+        <!-- Campo: Madurez-->
+        <div class="fila">
+          <div class="etiqueta">
+            <label for="madurez">MADUREZ</label>
+            <p class="descripcion">(Grado de equilibrio emocional y responsabilidad)</p>
           </div>
+          <input id="madurez" name="madurez" type="number" min="0" max="10" step="1" required>
+        </div>
 
-          <!-- Campo: Esfuerzo-->
-          <div class="fila">
-            <div class="etiqueta">
-              <label for="esfuerzo">ESFUERZO</label>
-              <p class="descripcion">(Voluntad para afrontar retos, constancia y disciplina)</p>
-            </div>
-            <input id="esfuerzo" name="esfuerzo" type="number" min="0" max="10" step="1" required>
+        <!-- Campo: Esfuerzo-->
+        <div class="fila">
+          <div class="etiqueta">
+            <label for="esfuerzo">ESFUERZO</label>
+            <p class="descripcion">(Voluntad para afrontar retos, constancia y disciplina)</p>
           </div>
+          <input id="esfuerzo" name="esfuerzo" type="number" min="0" max="10" step="1" required>
+        </div>
 
-          <!-- Campo: Suerte-->
-          <div class="fila">
-            <div class="etiqueta">
-              <label for="suerte">SUERTE</label>
-              <p class="descripcion">(Circunstancias externas o favorables que ayudan en el camino)</p>
-            </div>
-            <input id="suerte" name="suerte" type="number" min="0" max="10" step="1" required>
+        <!-- Campo: Suerte-->
+        <div class="fila">
+          <div class="etiqueta">
+            <label for="suerte">SUERTE</label>
+            <p class="descripcion">(Circunstancias externas o favorables que ayudan en el camino)</p>
           </div>
+          <input id="suerte" name="suerte" type="number" min="0" max="10" step="1" required>
+        </div>
 
-          <!-- Campo: Ayuda -->
-          <div class="fila">
-            <div class="etiqueta">
-              <label for="ayuda">AYUDA</label>
-              <p class="descripcion">(Recursos, apoyo externo o interno con los que se cuenta)</p>
-            </div>
-            <input id="ayuda" name="ayuda" type="number" min="0" max="10" step="1" required>
+        <!-- Campo: Ayuda -->
+        <div class="fila">
+          <div class="etiqueta">
+            <label for="ayuda">AYUDA</label>
+            <p class="descripcion">(Recursos, apoyo externo o interno con los que se cuenta)</p>
           </div>
+          <input id="ayuda" name="ayuda" type="number" min="0" max="10" step="1" required>
         </div>
       </div>
-
-      <!-- Botones de navegación -->
-      <div class="botones">
-        <a href="activo.html" class="btn btn-verde-oscuro">Volver al activo</a>
-        <button id="btnVerResultado" class="btn btn-naranja">Ver resultado</button>
-        <a href="index.html" class="btn btn-azul" id="btnInicio">Ir al inicio</a>
-
-      </div>
     </div>
-  
+
+    <!-- Botones de navegación -->
+    <div class="botones">
+      <a href="activo.html" class="btn btn-verde-oscuro">Volver al activo</a>
+      <button id="btnVerResultado" class="btn btn-naranja">Ver resultado</button>
+      <a href="index.html" class="btn btn-azul" id="btnInicio">Ir al inicio</a>
+
+    </div>
+  </div>
 
   <!-- Script de validación y guardado -->
   <script src="js/puntuaciones.js"></script>

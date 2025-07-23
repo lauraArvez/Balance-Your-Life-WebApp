@@ -1,8 +1,8 @@
 /* ===============================================
-    ESTILOS GENERALES
+    ESTILOS GENERALES COMUNES
    =============================================== */
 
-/* Fondo con degradado diagonal y tipografía base */
+/* Estructura base de la página */
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
@@ -26,25 +26,216 @@ body {
 .titulo {
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
+
 /* ===============================================
-    TARJETA EXPLICATIVA DEL ACTIVO
+    BLOQUE INFORMATIVO: DESCRIPCIÓN DEL ACTIVO
    =============================================== */
 
-/* Caja clara con texto negro para destacar explicaciones */
 .card {
   background-color: #fefaf6;
   color: #1d3d4a;
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 5px 5px 0 #ddd;
-  margin-bottom: 2rem;
   text-align: left;
+  margin-bottom: 1.5rem;
+  max-height: 30vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
-/* Cita o comentario resaltado dentro de la tarjeta */
+.card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+/* ===============================================
+    BLOQUE DE FORMULARIO DE PUNTUACIONES
+   =============================================== */
+
+.bloque {
+  background-color: #2a5665;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+  max-height: 45vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+.bloque::-webkit-scrollbar {
+  width: 6px;
+}
+
+.bloque::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+/* Contenedor de las filas */
+.activo-items {
+  background-color: #2a5665;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 #b5c9d6;
+}
+
+/* Cada fila de ítem */
+.fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+/* Etiqueta del campo */
+.etiqueta {
+  flex: 1;
+}
+
+/* Título del ítem */
+.etiqueta label {
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+/* Descripción breve */
+.descripcion {
+  font-size: 0.85rem;
+  color: #cfe7f3;
+  margin: 0;
+  text-transform: none;
+}
+
+/* Campo de entrada */
+.fila input {
+  width: 50px;
+  padding: 0.4rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  background-color: #fff;
+}
+
+
+/* ===============================================
+    ESTILOS PARA PÁGINA resultado.html
+   =============================================== */
+
+/* Caja clara con texto negro para destacar explicaciones */
+.card {
+  text-align: left;
+  background-color: #fefaf6;
+  color: #1d3d4a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0 #ddd;
+  height: 23vh;               /* altura a la mitad de la pantalla */
+  overflow-y: auto;           /* scroll si hace falta */
+  margin-bottom: 1.5rem;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+.card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+/* ===============================================
+    CAJA RESUMEN COMPACTO
+   =============================================== */
+.resumen-valores {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.resumen-valores .linea {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.resumen-valores .label {
+  font-weight: bold;
+  color: #ffffff;
+  min-width: 90px;
+}
+
+.resumen-valores .detalle {
+  color: #fff;
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.resumen-valores .valor {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+  text-align: right;
+  min-width: 35px;
+}
+
+/* ===============================================
+      BLOQUE DE PUNTUACIONES
+   =============================================== */
+
+/* Caja que agrupa el resumen y la interpretación */
+.bloque {
+  background-color: #2a5665;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+  max-width: 800px; /* Igual que el .card */
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 45vh;          /* Limita la altura a un 45% del viewport */
+  overflow-y: auto;          /* Activa scroll si el contenido excede */
+  scroll-behavior: smooth;
+  scrollbar-width: thin;     /* Scroll más fino (Firefox) */
+}
+
+/* navegadores WebKit (Chrome/Safari) */
+.bloque::-webkit-scrollbar {
+    width: 6px;
+}
+
+.bloque::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+/* Caja de interpretación textual */
 .interpretacion-dentro {
   margin-top: 1.5rem;
   background-color: rgba(255, 255, 255, 0.1);
@@ -54,34 +245,427 @@ body {
   border-radius: 6px;
   color: #fff;
   text-align: left;
-  /*max-width: 80%;     /* 📏 Más estrecho */
-  margin-left: auto;  /* Centrado horizontal */
-  margin-right: auto;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  max-height: 20vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+.interpretacion-dentro::-webkit-scrollbar {
+  width: 6px;
+}
+
+.interpretacion-dentro::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
 }
 
 /* ===============================================
-    BLOQUE DE PREGUNTAS Y PUNTUACIONES
+    BOTONES GENERALES
    =============================================== */
 
-/* Caja envolvente de los ítems del activo */
-.bloque {
-  background-color: #2a5665;
-  padding: 0.5rem;
+/* Contenedor de botones con espacio entre ellos */
+.botones {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Botón base uniforme */
+.btn,
+button.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 0.95rem;
+  padding: 1rem 0;
+  width: 150px; /* Ancho uniforme fijo */
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  line-height: 1.2;
+}
+
+.btn-azul { background-color: #5a94c0; }
+.btn-azul:hover { background-color: #4484b6; }
+
+.btn-verde { background-color: #2a5665; }
+
+.btn-verde:hover { background-color: #2d6a5f; }
+.btn-naranja { background-color: #e6a33d; }
+
+.btn-naranja:hover { background-color: #d38d1f; }
+
+/* Variante más oscura del verde */
+.btn-verde-oscuro { background-color: #2a5665; }
+.btn-verde-oscuro:hover { background-color: #1d3d4a; }
+
+
+/* ===============================================
+    ELEMENTOS VARIOS / UTILIDADES
+   =============================================== */
+
+/* Enlace a YouTube o Spotify */
+.enlace-youtube {
+  margin-top: 1rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.enlace-youtube a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.enlace-youtube a:hover {
+  color: #0919f3;
+}
+
+/* Caja de error visible al validar campos */
+.error-box {
+  background-color: #fdecea;
+  color: #b30000;
+  border: 1px solid #f5c6cb;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px rgba(255, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Centrado para la caja de error */
+.error-contenedor {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* Clases para mostrar u ocultar elementos */
+.oculto { display: none; }
+
+.visible { display: block; }
+
+/* Estilo del input con error */
+.input-error {
+  border: 2px solid #b00020 !important;
+  background-color: #fff2f2 !important;
+}
+
+/* Estilo para campos de solo lectura */
+input[readonly] {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  text-align: center;
+}
+
+input[readonly] {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+
+/* =============================
+    RESPONSIVE ACTIVO
+    ============================== */
+
+/* ===============================================
+    RESPONSIVE (solo para resultado.html)
+   =============================================== */
+
+@media (max-width: 600px) {
+
+  /* Asegura que padding y borders no desborden los elementos */
+  * {
+      box-sizing: border-box;
+  }
+
+  /* Ajustes globales del cuerpo */
+  body {
+      display: block;
+      padding: 1rem;
+      height: auto;
+      background: linear-gradient(135deg, #2a5665, #85a3ba, #af7d55);
+  }
+
+  /* Contenedor principal con espaciado */
+  .container {
+      margin-top: 0.5rem;
+      padding: 1rem;
+  }
+
+  /* Título adaptado al móvil */
+  .titulo {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      padding: 0 1rem;
+  }
+
+  /* Caja informativa con scroll si el texto es muy largo */
+  .card {
+    max-width: 340px;
+    margin: 0 auto 1.5rem auto;
+    padding: 1rem;
+    font-size: 0.90rem;
+    line-height: 1.5;
+    /*border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    background-color: #fefaf6;
+    color: #1d3d4a;*/
+  }
+
+  /* Estilo de scroll para navegadores WebKit */
+  .card::-webkit-scrollbar {
+      width: 6px;
+  }
+
+  .card::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+  }
+
+  /* Caja que contiene las preguntas */
+  .bloque {
+    background-color: #2a5665;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+    margin: 0 auto 1.2rem auto;
+
+    /* Ajuste de altura máxima para que se vea todo sin empujar los botones */
+    max-height: 33vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+  }
+
+  .bloque::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .bloque::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+
+  .interpretacion-dentro {
+    max-height: none;
+    overflow: visible;
+  }
+
+  /* ================================
+    ADAPTACIÓN RESPONSIVE DE RESUMEN
+   ================================ */
+  .resumen-valores {
+    padding: 0.8rem 1rem;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .resumen-valores .linea {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .resumen-valores .valor {
+    grid-column: 2 / 3;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: right;
+  }
+
+  .resumen-valores .label {
+    grid-column: 1 / 2;
+    font-size: 1rem;
+  }
+
+  .resumen-valores .detalle {
+    grid-column: 1 / 2;
+    font-size: 0.85rem;
+    color: #cfe7f3;
+  }
+
+  /* Botones adaptados al ancho del móvil */
+  .botones {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      align-items: center;
+  }
+
+  .btn {
+      width: 90%;
+      max-width: 260px;
+      padding: 0.85rem 1rem;
+      font-size: 0.92rem;
+  }
+
+  /* Asegura uniformidad para botones en móviles */
+  .btn,
+  .botones button {
+      display: block;
+      width: 100%;
+      max-width: 250px;
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+      margin: 0 auto;
+      line-height: 1.2;
+      border-radius: 6px
+  }
+
+
+  
+  
+  
+  /*REVISAR*/
+
+  /* Contenedor visual del formulario */
+  .activo-items {
+      padding: 1rem;
+      border-radius: 10px;
+      background-color: #2a5665;
+      box-shadow: none;
+  }
+
+  /* Ajuste de filas para inputs */
+  .fila {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+  }
+
+  /* Etiquetas alineadas a la izquierda */
+  .etiqueta {
+      flex: 1;
+  }
+
+  /* Etiqueta principal */
+  .etiqueta label {
+      font-size: 0.95rem;
+      color: #fff;
+  }
+
+  /* Texto explicativo más compacto */
+  .descripcion {
+      font-size: 0.8rem;
+      line-height: 1.2;
+      color: #cfe7f3;
+  }
+
+  /* Campo numérico compacto */
+  .fila input {
+      width: 50px;
+      font-size: 1rem;
+  }
+
+  
+
+
+
+
+/*REVISAR FUNCIONALIDAD*/
+.resumen-puntuaciones {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.resumen-puntuaciones span {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.resultado-box {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1rem 1.5rem;
   border-radius: 10px;
-  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
-  margin-bottom: 3rem;
-  max-width: 800px; /* Igual que el .card */
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.resultado-box strong {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.resultado-box .detalle {
+  color: #cde7f3;
+  font-weight: normal;
+  font-size: 0.95rem;
+}
+
+.resultado-box span[id^="texto"] {
+  font-weight: bold;
+  color: #fdd36a;
+}
+
+/* ELIMINADO EN RESULTADO HTML*/
+
+.resultado-box {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.resultado-box strong {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.resultado-box .detalle {
+  color: #cde7f3;
+  font-weight: normal;
+  font-size: 0.95rem;
+}
+
+.resultado-box span[id^="texto"] {
+  font-weight: bold;
+  color: #fdd36a;
 }
 
 /* Caja interna que agrupa las preguntas */
 .activo-items {
   background-color: #2a5665;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 10px;
   box-shadow: 4px 4px 0 #b5c9d6;
-  min-width: 300px;
+  /*min-width: 200px;*/
 }
 
 /* Cada fila con etiqueta y campo numérico */
@@ -117,7 +701,7 @@ body {
   font-weight: bold;
   text-align: left;
   flex: 1;
-  text-transform: uppercase; /* 🔠 Mayúsculas */
+  text-transform: uppercase; /* Mayúsculas */
 }
 
 /* Campo de entrada numérico */
@@ -173,296 +757,7 @@ textarea {
   resize: vertical;
 }
 
-
-/* ===============================================
-    BOTONES Y NAVEGACIÓN
-   =============================================== */
-
-/* Contenedor de botones con espacio entre ellos */
-.botones {
-  margin-top: 2rem;
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
-/* Botones uniformes para a y button */
-.btn, button {
-  display: inline-block;
-  text-decoration: none;
-  font-weight: normal;
-  font-size: 1rem;
-  padding: 1rem 2rem;
-  min-width: 170px;
-  text-align: center;
-  border-radius: 8px;
-  border: none;
-  color: #fff;
-  box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.4);
-  background-color: #2a5665;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
 
-/* Botón base uniforme para <a> y <button> */
-.btn,
-button.btn {
-  display: inline-block;
-  text-decoration: none;
-  font-weight: normal;
-  font-size: 1rem;
-  padding: 1rem 0;
-  width: 180px; /* 🎯 Ancho uniforme fijo */
-  text-align: center;
-  border-radius: 8px;
-  border: none;
-  color: white;
-  box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.4);
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  line-height: 1.2;
-}
 
-.btn-azul {
-  background-color: #5a94c0;
-}
-
-.btn-azul:hover {
-  background-color: #4484b6;
-}
-
-.btn-verde {
-  background-color: #2a5665;
-}
-
-.btn-verde:hover {
-  background-color: #2d6a5f;
-}
-.btn-naranja {
-  background-color: #e6a33d;
-}
-
-.btn-naranja:hover {
-  background-color: #d38d1f;
-}
-
-/* Variante más oscura del verde */
-.btn-verde-oscuro {
-  background-color: #2a5665;
-}
-
-.btn-verde-oscuro:hover {
-  background-color: #1d3d4a;
-  
-}
-
-/* ===============================================
-    ENLACE FINAL Y ERRORES
-   =============================================== */
-
-/* Enlace a YouTube o Spotify */
-.enlace-youtube {
-  margin-top: 2rem;
-  text-align: center;
-  color: #fff;
-  font-size: 1rem;
-}
-
-.enlace-youtube a {
-  color: #f7f7f7;
-  font-weight: normal;
-  text-decoration: underline;
-}
-
-.enlace-youtube a:hover {
-  color: #f30909;
-}
-
-/* Caja de error visible al validar campos */
-.error-box {
-  background-color: #fdecea;
-  color: #b30000;
-  border: 1px solid #f5c6cb;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0px 0px 5px rgba(255, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Centrado para la caja de error */
-.error-contenedor {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-}
-
-/* Clases para mostrar u ocultar elementos */
-.oculto {
-  display: none;
-}
-
-.visible {
-  display: block;
-}
-
-/* Estilo del input con error */
-.input-error {
-  border: 2px solid #b00020 !important;
-  background-color: #fff2f2 !important;
-}
-
-/* Estilo para campos de solo lectura */
-input[readonly] {
-  background-color: #fff !important;
-  color: #000 !important;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  padding: 0.4rem;
-  text-align: center;
-}
-
-input[readonly] {
-  background-color: #fff !important;
-  color: #000 !important;
-}
-
-/* =============================
-        ADAPTACIÓN RESPONSIVE ACTIVO
-    ============================= */
-
-@media (max-width: 600px) {
-
-  /* 🔧 Asegura que padding y borders no desborden los elementos */
-  * {
-      box-sizing: border-box;
-  }
-
-  /* Ajustes globales del cuerpo */
-  body {
-      display: block;
-      padding: 1rem;
-      height: auto;
-      background: linear-gradient(135deg, #2a5665, #85a3ba, #af7d55);
-  }
-
-  /* Contenedor principal con espaciado */
-  .container {
-      margin-top: 1rem;
-      padding: 1rem;
-  }
-
-  /* Título adaptado al móvil */
-  .titulo {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 1.5rem;
-      padding: 0 1rem;
-  }
-
-  /* Caja informativa con scroll si el texto es muy largo */
-  .card {
-      max-width: 320px;
-      max-height: 30vh;
-      overflow-y: auto;
-      margin: 0 auto 1.5rem auto;
-      padding: 1.2rem;
-      font-size: 0.95rem;
-      line-height: 1.5;
-      border-radius: 10px;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-      scroll-behavior: smooth;
-      scrollbar-width: thin;
-  }
-
-  /* Estilo de scroll para navegadores WebKit */
-  .card::-webkit-scrollbar {
-      width: 6px;
-  }
-
-  .card::-webkit-scrollbar-thumb {
-      background-color: rgba(0, 0, 0, 0.2);
-      border-radius: 3px;
-  }
-
-  /* Caja que contiene las preguntas */
-  .bloque {
-      max-width: 100%;
-      margin: 0 auto 2rem auto;
-      padding: 1rem;
-      box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
-  }
-
-  /* Contenedor visual del formulario */
-  .activo-items {
-      padding: 1rem;
-      border-radius: 10px;
-      background-color: #2a5665;
-      box-shadow: none;
-  }
-
-  /* Ajuste de filas para inputs */
-  .fila {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      margin-bottom: 1.2rem;
-  }
-
-  /* Etiquetas alineadas a la izquierda */
-  .etiqueta {
-      flex: 1;
-  }
-
-  /* Etiqueta principal */
-  .etiqueta label {
-      font-size: 0.95rem;
-      color: #fff;
-  }
-
-  /* Texto explicativo más compacto */
-  .descripcion {
-      font-size: 0.8rem;
-      line-height: 1.2;
-      color: #cfe7f3;
-  }
-
-  /* Campo numérico compacto */
-  .fila input {
-      width: 50px;
-      font-size: 1rem;
-  }
-
-  /* Botones adaptados al ancho del móvil */
-  .botones {
-      margin-top: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center;
-  }
-
-  .btn {
-      width: 90%;
-      max-width: 260px;
-      padding: 0.85rem 1rem;
-      font-size: 0.92rem;
-  }
-
-  /* Asegura uniformidad para botones en móviles */
-  .btn,
-  .botones button {
-      display: block;
-      width: 100%;
-      max-width: 280px;
-      padding: 0.85rem 1.2rem;
-      font-size: 0.92rem;
-      margin: 0 auto;
-  }
-}

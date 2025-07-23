@@ -105,7 +105,7 @@ if (btnVerResultado) {
       mostrarError(`⚠️ Antes de continuar debes completar también los valores del ${otroTipo.toUpperCase()}.`);
       setTimeout(() => {
         window.location.href = `${otroTipo}.html`;
-      }, 1800); // Le da tiempo a ver el mensaje antes de redirigir
+      }, 1800); // Da tiempo a ver el mensaje antes de redirigir
       return;
     }
 

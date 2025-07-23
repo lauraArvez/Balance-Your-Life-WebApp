@@ -1,0 +1,150 @@
+/* ===============================================
+ESTILOS ESPECÍFICOS PARA ACTIVO.HTML y PASIVO
+=============================================== */
+
+.card{
+    max-height: 25vh;
+}
+
+/* ======== BLOQUE DE FORMULARIO ACTIVO Y PASIVO ======== */
+/* Caja principal del formulario con scroll si es necesario */
+.bloque {
+    background-color: #2a5665;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+    max-height: 45vh;
+    overflow-y: visible; /* ← esto anula el scroll heredado */
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+
+.bloque::-webkit-scrollbar {
+    width: 6px;
+}
+.bloque::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+
+/* ======== ÍTEMS DE ACTIVO (formulario de valores) ======== */
+
+.activo-items {
+    background-color: #2a5665;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 #b5c9d6;
+}
+
+/* Estructura de cada fila (etiqueta + input) */
+.fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+/* Etiqueta del campo */
+.etiqueta {
+    flex: 1;
+}
+
+/* Título del ítem */
+.etiqueta label {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+/* Descripción corta debajo de cada etiqueta */
+.descripcion {
+    font-size: 0.85rem;
+    color: #cfe7f3;
+    margin: 0;
+    text-transform: none;
+    font-weight: normal;
+}
+
+/* Campo de entrada */
+.fila input {
+    width: 50px;
+    padding: 0.4rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    background-color: #fff;
+}
+
+
+    /* ======================================================
+        ADAPTACIÓN RESPONSIVE PARA ACTIVO.HTML y PASIVO.HTML
+    ========================================================= */
+
+    @media (max-width: 600px) {
+
+    /* Ajustamos altura para que el bloque no oculte botones */
+    .bloque {
+        background-color: #2a5665;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+        max-width: 100%;
+        margin: 0 auto 1.2rem auto;
+        /* Esto para anula scroll heredado */
+        max-height: none !important;
+        overflow: visible !important;
+        height: auto;
+    }
+
+    /* Agrupamos inputs en filas más compactas */
+    .fila {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .etiqueta label {
+        font-size: 0.95rem;
+        color: #fff;
+    }
+
+    .descripcion {
+        font-size: 0.8rem;
+        line-height: 1.2;
+        color: #cfe7f3;
+    }
+
+    .fila input {
+        width: 50px;
+        font-size: 1rem;
+    }
+
+    /* Ajustes para que los botones se posicionen justo después sin recorte */
+    .botones {
+        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    .btn,
+    .botones button {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+        margin: 0 auto;
+        line-height: 1.2;
+        border-radius: 6px;
+    }
+}

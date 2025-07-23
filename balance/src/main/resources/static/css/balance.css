@@ -25,12 +25,22 @@ body {
 
 /* Caja con explicación */
 .card {
-  background-color: #fefaf6;
+  /*background-color: #fefaf6;
   color: #1d3d4a;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 5px 5px 0 #ddd;
-  margin-bottom: 3rem;
+  margin-bottom: 3rem;*/
+  background-color: #fefaf6;
+  color: #1d3d4a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0 #ddd;
+  height: 50vh;               /* altura a la mitad de la pantalla */
+  overflow-y: auto;           /* scroll si hace falta */
+  margin-bottom: 1.5rem;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
 /* Contenedor de botones */
@@ -56,7 +66,7 @@ body {
 
 /* Mejora de legibilidad para los párrafos explicativos */
 .card p {
-  line-height: 1.7;
+  line-height: 1.3;
   margin-bottom: 1rem;
   text-align: justify;
   font-size: 1rem;

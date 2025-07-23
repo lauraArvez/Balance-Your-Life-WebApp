@@ -49,7 +49,7 @@
     function crearBotonPDF({ activo, pasivo, totalActivo, totalPasivo, diferencia, interpretacion, fecha }) {
     const btn = document.createElement("button");
     btn.textContent = "Descargar PDF";
-    btn.classList.add("btn", "btn-naranja"); // CAMBIO: clase naranja
+    btn.classList.add("btn", "btn-naranja");
     btn.style.marginTop = "2rem";
 
     btn.addEventListener("click", async () => {

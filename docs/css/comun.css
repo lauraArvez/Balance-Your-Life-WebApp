@@ -1,0 +1,227 @@
+/* ===============================================
+    ESTILOS COMUNES A TODAS LAS PÁGINAS
+   =============================================== */
+
+/* ==== BASE GENERAL ==== */
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #2a5665, #85a3ba, #af7d55);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal centrado con ancho máximo */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Título de la página */
+.titulo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem; /*0.5rem;*/
+}
+
+
+/* ==== TARJETA EXPLICATIVA ==== */
+
+.card {
+    text-align: left;
+    background-color: #fefaf6;
+    color: #1d3d4a;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0 #ddd;
+    margin-bottom: 1.5rem;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    /*max-height: 30vh;*/
+}
+
+.card::-webkit-scrollbar {
+    width: 6px;
+}
+.card::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+
+/* ==== BOTONES GENERALES ==== */
+
+.botones {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn,
+button.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 0.95rem;
+    padding: 1rem 0;
+    width: 150px;   /* Ancho uniforme fijo */
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    line-height: 1.2;
+}
+
+.btn-azul { background-color: #5a94c0; }
+.btn-azul:hover { background-color: #4484b6; }
+
+.btn-verde { background-color: #2a5665; }
+.btn-verde:hover { background-color: #2d6a5f; }
+
+.btn-naranja { background-color: #e6a33d; }
+.btn-naranja:hover { background-color: #d38d1f; }
+
+.btn-verde-oscuro { background-color: #2a5665; }
+.btn-verde-oscuro:hover { background-color: #1d3d4a; }
+
+
+/* ==== ELEMENTOS VARIOS ==== */
+
+.enlace-youtube {
+    margin-top: 1rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.enlace-youtube a {
+    color: #fff;
+    text-decoration: underline;
+}
+.enlace-youtube a:hover {
+    color: #0919f3;
+}
+
+.error-box {
+    background-color: #fdecea;
+    color: #b30000;
+    border: 1px solid #f5c6cb;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px rgba(255, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.error-contenedor {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.oculto { display: none; }
+.visible { display: block; }
+
+.input-error {
+    border: 2px solid #b00020 !important;
+    background-color: #fff2f2 !important;
+}
+
+input[readonly] {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    text-align: center;
+}
+
+
+/* ===============================================
+        RESPONSIVE COMÚN
+   =============================================== */
+
+@media (max-width: 600px) {
+    
+    /* Asegura que padding y borders no desborden los elementos */
+  * {
+        box-sizing: border-box;
+    }
+
+    body {
+        display: block;
+        padding: 1rem;
+        height: auto;
+        background: linear-gradient(135deg, #2a5665, #85a3ba, #af7d55);
+    }
+
+    /* Contenedor principal con espaciado */
+    .container {
+        margin-top: 0.5rem;
+        padding: 1rem;
+    }
+
+    /* Título adaptado al móvil */
+    .titulo {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+    }
+
+    .card {
+        max-width: 340px;
+        margin: 0 auto 1.5rem auto;
+        padding: 1rem;
+        font-size: 0.90rem;
+        line-height: 1.5;
+    }
+
+    /* Estilo de scroll para navegadores WebKit */
+    .card::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .card::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+    }
+
+    /* Asegura uniformidad para botones en móviles */
+    .btn,
+    .botones button {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        margin: 0 auto;
+        line-height: 1.2;
+        border-radius: 6px;
+    }
+
+    .botones {
+        /*flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;*/
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+    }
+}

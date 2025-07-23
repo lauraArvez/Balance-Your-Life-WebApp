@@ -50,14 +50,20 @@ function mostrarResultadosEnPantalla(data) {
   const { totalActivo, totalPasivo, interpretacion } = data;
   const diferencia = totalActivo - totalPasivo;
 
-  const inputActivo = document.getElementById("valorActivo");
-  const inputPasivo = document.getElementById("valorPasivo");
-  const inputDiferencia = document.getElementById("valorDiferencia");
+  //const inputActivo = document.getElementById("valorActivo");
+  //const inputPasivo = document.getElementById("valorPasivo");
+  //const inputDiferencia = document.getElementById("valorDiferencia");
+  const textoActivo = document.getElementById("textoActivo");
+  const textoPasivo = document.getElementById("textoPasivo");
+  const textoDiferencia = document.getElementById("textoDiferencia");
   const interpretacionDiv = document.getElementById("interpretacionResultado");
 
-  if (inputActivo) inputActivo.value = totalActivo;
+  /*if (inputActivo) inputActivo.value = totalActivo;
   if (inputPasivo) inputPasivo.value = totalPasivo;
-  if (inputDiferencia) inputDiferencia.value = diferencia;
+  if (inputDiferencia) inputDiferencia.value = diferencia;*/
+  if (textoActivo) textoActivo.textContent = totalActivo;
+  if (textoPasivo) textoPasivo.textContent = totalPasivo;
+  if (textoDiferencia) textoDiferencia.textContent = diferencia;
   if (interpretacionDiv) {
     interpretacionDiv.innerHTML = `<p>${interpretacion}</p>`;
   }

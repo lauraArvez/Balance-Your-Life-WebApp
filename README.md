@@ -1,3 +1,5 @@
+![Banner](./assets/balance-webapp-banner.png)
+
 # Balance Your Life – WebApp
 
 Aplicación web que permite evaluar tu **Balance Existencial** a través de los conceptos desarrollados por el psicólogo Antoni Bolinches. Calcula el equilibrio entre tu **Activo** (valores que tienes) y tu **Pasivo** (a lo que debes tu bienestar), ofreciendo un análisis personalizado.
